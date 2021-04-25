@@ -28,11 +28,11 @@ type Model struct{
 	Feedback []string "json:\"feedback\""
 }
 
-type FeedbackResult struct {
+type feedbackResult struct {
 	feedbackTotal, feedbackPositive, feedbackNegative, feedbackNeutral int
 }
 
-var vehicleResult map[string]FeedbackResult
+var vehicleResult map[string]feedbackResult
 var inventory []vehicle
 
 type rating float32
@@ -61,7 +61,7 @@ func init() {
 		truck{"F-150", "Ford", "Truck"},
 		truck{"RAM1500", "Dodge", "Truck"}}
 
-	vehicleResult = make(map[string]FeedbackResult)
+	vehicleResult = make(map[string]feedbackResult)
 
 }
 
